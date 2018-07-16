@@ -1,0 +1,387 @@
+*{
+	padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background: #e5ebf9;
+    font-family: "Open Sans",Arial;
+    font-size: 22px;
+}
+/*Menu*/
+
+header{
+    width: 100%;
+}
+header nav{
+    background: #023859;
+    z-index: 1000;
+    max-width: 1000px;
+    width: 95%;
+    margin: 20px auto;
+}
+.menu_bar{
+    display: none;
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul li{
+    display: inline-block;
+    position: relative;
+}
+header ul li:hover{
+    background: #e6344a;
+}
+header nav ul li a{
+    color: white;
+    display: block;
+    font-size: 1.2em;
+    text-decoration:none;
+    padding: 20px;
+}
+header nav ul li a span{
+    margin-right: 10px;
+}
+header nav ul li:hover .children{
+    display: block;
+}header nav ul li .children{
+    display: none;
+    background: #095104;
+    position: absolute;
+    width: 150%;
+    z-index: 1000;
+}
+header nav ul li .children li{
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+header nav ul li .children li a{
+    display:block;
+}
+header nav ul li .children li span{
+    float: right;
+    position: relative;
+    top:3px;
+    margin-right:0; 
+    margin-left: 10px;
+}
+header nav ul li .caret{
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+    margin-right: 0px;
+}
+
+footer {
+    background:#22bce0;
+    color:rgba(255, 255, 255, 0.7);
+    padding: 1em;
+    text-align:center;
+}
+.cursivas{
+    font-family: 'Galada',Arial;
+    font-size: 1.2em;
+}
+footer p:first-child {
+    margin-bottom:0;
+}
+footer p:last-child {
+    margin-top:0;
+}
+footer p:last-child:after {
+    content:" -"
+}
+footer p:last-child:before {
+    content:"- "
+}
+h2 {
+    text-align:center;
+}
+h4 {
+    background:#ff0;
+    border-radius:2em;
+    color:#f00;
+    font-size:.8em;
+    text-align:center;
+    margin: .5em auto;
+}
+select {
+     background: transparent;
+     font-size: 14px;
+     padding: 1px;
+     text-align: center;
+     width: 250px;
+}
+table {
+    border: 2px solid;
+    border-radius: 0.8em;
+    text-align:center;
+    margin: 10px auto;
+    width: 98%;
+}
+td, tr{
+    border: 1px solid;
+}
+table .titeles {
+    font-weight:bold;
+}
+
+/*formulario*/
+#formulario, #formulario1, #formulario3{
+    font-size: 1.2em;
+    margin:.5em auto;
+    padding:.5em;
+    text-align:center;
+}
+
+#formulario input, 
+#formulario select, 
+#formulario textarea, 
+#formulario1 input, 
+#formulario1 select, 
+#formulario1 textarea,
+#formulario3 input, 
+#formulario3 select, 
+#formulario3 textarea{
+    font-size: .9em;
+    margin: .5em auto;
+    text-align: center;
+    display: block;
+}
+/*#formulario3 .fecha{
+    font-size: 1em;
+    display: block;
+    text-align: center;
+    margin: 1px auto;
+}*/
+#contenido {
+    border-radius:1em;
+    margin: 0.8em;
+}
+#contenido .item {
+    background: #fff;
+    border-bottom:3px solid #22bce0;
+    margin-bottom:3em;
+    min-height:128px;
+    border-radius: 1em;
+}
+#contenido .item p {
+    font-weight:bold;
+    text-align:center;
+}
+#contenido .item div {
+    text-align:center;
+
+}
+.libre {
+    background: green;
+    border-radius: 0.4em;
+}
+.deberas {
+    background: red;
+    border-radius: 0.4em;
+}
+.tutol{
+    font-size: 1.5em;
+    margin: 50px auto;
+    text-align: center;
+    width: 90%;
+}
+#contenido .item .cuadritos{
+    margin: 15px auto;
+    width: 90%;
+}
+.cuadritos{
+    border-style: solid;
+    border-width: 2px 20px 4px 20px;
+    border-color:#0B5B9F;
+    border-radius:5px;
+}
+.cuadrosiz{    
+    border-width: 2px 20px 4px 5px;  
+}
+.cuadrosder{
+    border-width: 2px 5px 4px 20px;
+}
+
+/*Inputs radios*/
+
+#formulario3 input[type="radio"]{
+    display: none;
+}
+#formulario3 .radio label{
+    color: #0774d9;
+    padding: 10px 15px 10px 51px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all  0.3s ease;
+    -webkit-transition: all  0.3s ease;
+    -moz-transition: all  0.3s ease;
+    -o-transition: all  0.3s ease;
+}
+#formulario3 .radio label:hover{
+    background: rgba(0,116,217,.2);
+}
+#formulario3 .radio label:before{
+    content: "";
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background: none;
+    border: 3px solid #0774d9;
+    border-radius: 50%;
+    position: absolute;
+    left: 17px;
+    top: 17px;
+}
+#formulario3 input[type="radio"]:checked + label{
+    padding: 5px 15px;
+    background: #0774d9;
+    border-radius: 2px;
+    color: #fff;
+}
+#formulario3 input[type="radio"]:checked + label:before{
+    display: none;
+}
+/*MediaQuerys*/
+@media screen and (max-width: 768px){
+    header nav ul li a{
+         padding: 9px;
+        font-size: .9em;
+    }
+}
+
+@media screen and (max-width: 640px){
+   
+    body{
+        padding-top: 80px;
+    }
+    table{
+        margin: 10px auto;
+        width: 96%;
+    }
+    #formulario, #formulario1{
+        font-size: 1.6em;
+    }
+    #formulario input, 
+    #formulario select, 
+    #formulario textarea, 
+    #formulario1 input, 
+    #formulario1 select, 
+    #formulario1 textarea,
+    #formulario3 input, 
+    #formulario3 select, 
+    #formulario3 textarea{
+        font-size: .7em;
+    }
+    #contenido .item{
+        border-radius: 0.5em;
+    }
+    .menu_bar{
+        display: block;
+        width: 100%;
+        position: fixed;
+        top:0;
+        background: #023859;
+        z-index: 100000;
+    }
+    .menu_bar .bt-menu{
+        display: block;
+        padding: 20px;
+        color: white;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .menu_bar span{
+        float: right;
+        font-size: 40px;
+    }
+    header nav{
+        width: 85%;
+        position: fixed;
+        right: 100%;
+        margin: 0;
+        overflow: scroll;
+        height: calc(100% - 80px);
+    }
+    header nav ul li{
+        display: block;
+        border-bottom: 1px solid rgba(255,255,255,.5);
+    }
+    header nav ul li a{
+        display: block;
+        font-size: 1.3em;
+        padding: .5em .3em;
+    }
+    header nav ul li:hover .children{
+        display: none;
+    }
+    header nav ul li .children{
+        width: 100%;
+        position: relative;
+    }
+    header nav ul li .children li a{
+        margin-left: 20px;
+    }
+    header nav ul li .caret{
+        float:right;
+    }
+    .tabla table, .tabla thead, .tabla tr, .tabla th, .tabla tbody, .tabla td {
+        display:block;
+    }
+    td, table{
+        border: 0px;
+    }
+    tr{
+         border-radius: 0.4em;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .tabla table thead tr, .tabla thead thead tr, .tabla tr thead tr, .tabla th thead tr, .tabla tbody thead tr, .tabla td thead tr {
+        display:none;
+        position:absolute;
+        top:-9999px;
+        left:-9999px
+    }
+    .tabla table td, .tabla thead td, .tabla tr td, .tabla th td, .tabla tbody td, .tabla td td {
+        border:none;
+        border-bottom:1px solid #eee;
+        position:relative;
+        padding-left:50%;
+        /*z-index: 1;*/
+    }
+    .tabla table td:before, .tabla thead td:before, .tabla tr td:before, .tabla th td:before, .tabla tbody td:before, .tabla td td:before {
+        position:absolute;
+        top:6px;
+        left:6px;
+        width:45%;
+        padding-right:10px;
+        white-space:nowrap;
+    }
+    .tabla table td:nth-of-type(1):before, .tabla thead td:nth-of-type(1):before, .tabla tr td:nth-of-type(1):before, .tabla th td:nth-of-type(1):before, .tabla tbody td:nth-of-type(1):before, .tabla td td:nth-of-type(1):before {
+        content:"Nombre:";
+    }
+    .tabla table td:nth-of-type(2):before, .tabla thead td:nth-of-type(2):before, .tabla tr td:nth-of-type(2):before, .tabla th td:nth-of-type(2):before, .tabla tbody td:nth-of-type(2):before, .tabla td td:nth-of-type(2):before {
+        content:"Debe:";
+    }
+    .tabla table td:nth-of-type(3):before, .tabla thead td:nth-of-type(3):before, .tabla tr td:nth-of-type(3):before, .tabla th td:nth-of-type(3):before, .tabla tbody td:nth-of-type(3):before, .tabla td td:nth-of-type(3):before {
+        content:"Status";
+    }
+   #formulario input, #formulario1 input, #formulario select, #formulario textarea,#formulario1 select, #formulario1 textarea {
+        width: 90%;
+    }
+}
